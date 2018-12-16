@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Medicine_Scheduling_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Medicine Scheduling Application" Height="450" Width="800">
+    <Grid Margin="-1,0,0.6,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Medicine Scheduling Application" Grid.Row="1" Grid.Column="1" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <TextBlock Text="Please login to access the application" Grid.Row="3" Grid.Column="1" FontSize="20" FontFamily="Agency FB" Background="#FFFAF78C" Grid.ColumnSpan="4"/>
+        <TextBlock Text="Username" Grid.Row="5" Grid.Column="1" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Background="LightGray" />
+        <TextBlock Grid.Row="6" Grid.Column="1" FontSize="20" FontFamily="Agency FB" Background="LightGray" ><Run FontWeight="Bold" Text="Password"/></TextBlock>
+        <TextBox Text=" " Grid.Row="5" Grid.Column="3" Background="LightGray" Grid.ColumnSpan="2" />
+        <TextBox Text=" " Grid.Row="6" Grid.Column="3" Background="LightGray" Grid.ColumnSpan="2" />
+        <Image Source="C:\Users\DozyD\Downloads\lecturer3.png" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="3" Grid.RowSpan="4" />
+        <Button Content="Close" Name="btnClose" Grid.Row="8" Grid.Column="8" Background="#FFFAF78C" FontWeight="Bold"/>
+        <Button Content="OK" Name="btnOk" Grid.Row="8" Grid.Column="7" Background="#FFFAF78C" FontWeight="Bold"/>
     </Grid>
 </Window>

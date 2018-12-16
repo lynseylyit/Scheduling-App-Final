@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medicine Scheduling App", "Medicine Scheduling App.csproj", "{14E5FF66-F1A3-4760-BEB7-A85047E47FAA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63F949AF-722D-471A-AEE8-2313A702675A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\lecturer.png = ..\..\..\..\Downloads\lecturer.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

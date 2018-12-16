@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Medicine_Scheduling_App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="MyTheme.xaml" />
     </Application.Resources>
 </Application>

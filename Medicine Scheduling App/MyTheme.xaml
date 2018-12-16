@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Medicine_Scheduling_App">
+
+    <Style TargetType="{x:Type Window}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <SolidColorBrush Color="#FF14A4A7"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type local:MainWindow}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:App}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:AdministratorDashboard}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:LecturerDashboard}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ModuleCoordinatorDashboard}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ManageLecturers}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ManageLectures}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ManageLectures2}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ManageModules}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ManageVenues}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ViewTimetables}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ViewTimetables2}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ViewTimetables3}" BasedOn="{StaticResource {x:Type Window}}"/>
+</ResourceDictionary>
