@@ -24,6 +24,7 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
         <Button Content="View Timetables" Name="btnViewTimetables" Grid.Row="2" Grid.Column="1" />
@@ -31,7 +32,7 @@
         <Button Content="Manage Lectures" Name="btnManageLectures" Grid.Row="2" Grid.Column="3" />
         <Button Content="Manage Lecturers" Name="btnManageLecturers" Grid.Row="2" Grid.Column="4" />
         <Button Content="Manage Venues" Name="btnManageVenues" Grid.Row="2" Grid.Column="5" />
-        <Button Content="Logout" Name="btnLogout" Grid.Row="6" Grid.Column="5" />
+        <Button Content="Logout" Name="btnLogout" Grid.Row="7" Grid.Column="5" />
         <Image Source="C:\Users\DozyD\Downloads\lecturer4.png" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3" />
     </Grid>
 </Window>

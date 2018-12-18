@@ -21,5 +21,4 @@
     <Style TargetType="{x:Type local:ManageVenues}" BasedOn="{StaticResource {x:Type Window}}"/>
     <Style TargetType="{x:Type local:ViewTimetables}" BasedOn="{StaticResource {x:Type Window}}"/>
     <Style TargetType="{x:Type local:ViewTimetables2}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ViewTimetables3}" BasedOn="{StaticResource {x:Type Window}}"/>
 </ResourceDictionary>

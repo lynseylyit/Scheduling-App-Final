@@ -33,10 +33,10 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Medicine Scheduling Application" Grid.Row="1" Grid.Column="1" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Grid.ColumnSpan="3"/>
         <TextBlock Text="Please login to access the application" Grid.Row="3" Grid.Column="1" FontSize="20" FontFamily="Agency FB" Background="#FFFAF78C" Grid.ColumnSpan="4"/>
-        <TextBlock Text="Username" Grid.Row="5" Grid.Column="1" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Background="LightGray" />
-        <TextBlock Grid.Row="6" Grid.Column="1" FontSize="20" FontFamily="Agency FB" Background="LightGray" ><Run FontWeight="Bold" Text="Password"/></TextBlock>
-        <TextBox Text=" " Grid.Row="5" Grid.Column="3" Background="LightGray" Grid.ColumnSpan="2" />
-        <TextBox Text=" " Grid.Row="6" Grid.Column="3" Background="LightGray" Grid.ColumnSpan="2" />
+        <TextBlock Text="Username" Grid.Row="5" Grid.Column="1" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Background="LightGray" Margin="0,0,4,1"/>
+        <TextBlock Grid.Row="6" Grid.Column="1" FontSize="20" FontFamily="Agency FB" Background="LightGray" Margin="0,0,4,0"><Run FontWeight="Bold" Text="Password"/></TextBlock>
+        <TextBox Text=" " Grid.Row="5" Grid.Column="2" Background="LightGray" Grid.ColumnSpan="2" />
+        <TextBox Text=" " Grid.Row="6" Grid.Column="2" Background="LightGray" Grid.ColumnSpan="2" />
         <Image Source="C:\Users\DozyD\Downloads\lecturer3.png" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="3" Grid.RowSpan="4" />
         <Button Content="Close" Name="btnClose" Grid.Row="8" Grid.Column="8" Background="#FFFAF78C" FontWeight="Bold"/>
         <Button Content="OK" Name="btnOk" Grid.Row="8" Grid.Column="7" Background="#FFFAF78C" FontWeight="Bold"/>
