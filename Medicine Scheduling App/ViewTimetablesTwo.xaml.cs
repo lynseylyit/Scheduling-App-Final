@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Medicine_Scheduling_App
 {
     /// <summary>
-    /// Interaction logic for LecturerDashboard.xaml
+    /// Interaction logic for ViewTimetablesTwoxaml.xaml
     /// </summary>
-    public partial class LecturerDashboard : Window
+    public partial class ViewTimetablesTwo : Window
     {
-        public LecturerDashboard()
+        public ViewTimetablesTwo()
         {
             InitializeComponent();
         }

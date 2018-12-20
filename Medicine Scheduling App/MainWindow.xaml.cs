@@ -24,5 +24,13 @@ namespace Medicine_Scheduling_App
         {
             InitializeComponent();
         }
+
+        private void btnOk_Click(object sender, RoutedEventArgs e)
+        {
+            //Uri uri = new Uri("AdministratorDashboard.xaml", UriKind.Relative);
+            //  NavigationService.Navigate(new Uri("AdministratorDashboard.xaml", UriKind.Relative));
+            Dashboard administrator = new Dashboard();
+            administrator.ShowDialog();
+        }
     }
 }

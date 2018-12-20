@@ -17,11 +17,23 @@ namespace Medicine_Scheduling_App
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class AdministratorDashboard : Window
+    public partial class Dashboard : Window
     {
-        public AdministratorDashboard()
+
+        public Dashboard()
         {
             InitializeComponent();
         }
+        private void btnTime_Click(object sender, RoutedEventArgs e)
+        {
+            ViewTimetablesOne viewTimetable = new ViewTimetablesOne();
+            viewTimetable.ShowDialog();
+        }
+        private void btnModules_Click(object sender, RoutedEventArgs e)
+        {
+            ManageModules modules = new ManageModules();
+            modules.ShowDialog();
+        }
     }
 }
+

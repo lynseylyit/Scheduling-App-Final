@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Medicine_Scheduling_App
 {
     /// <summary>
-    /// Interaction logic for ManageLectures.xaml
+    /// Interaction logic for ManageLecturesOne.xaml
     /// </summary>
-    public partial class ManageLectures : Window
+    public partial class ManageLecturesOne : Window
     {
-        public ManageLectures()
+        public ManageLecturesOne()
         {
             InitializeComponent();
         }

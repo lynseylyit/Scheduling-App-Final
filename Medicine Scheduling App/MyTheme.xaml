@@ -11,14 +11,12 @@
     </Style>
     <Style TargetType="{x:Type local:MainWindow}" BasedOn="{StaticResource {x:Type Window}}"/>
     <Style TargetType="{x:Type local:App}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:AdministratorDashboard}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:LecturerDashboard}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ModuleCoordinatorDashboard}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:Dashboard}" BasedOn="{StaticResource {x:Type Window}}"/>
     <Style TargetType="{x:Type local:ManageLecturers}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ManageLectures}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ManageLectures2}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ManageLecturesOne}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ManageLecturesTwo}" BasedOn="{StaticResource {x:Type Window}}"/>
     <Style TargetType="{x:Type local:ManageModules}" BasedOn="{StaticResource {x:Type Window}}"/>
     <Style TargetType="{x:Type local:ManageVenues}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ViewTimetables}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ViewTimetables2}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ViewTimetablesOne}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ViewTimetablesTwo}" BasedOn="{StaticResource {x:Type Window}}"/>
 </ResourceDictionary>
