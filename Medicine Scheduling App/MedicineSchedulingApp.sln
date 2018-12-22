@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63F949AF-722D-471A-AEE8-2313A702675A}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\Downloads\lecturer.png = ..\..\..\..\Downloads\lecturer.png
+		..\..\..\..\Downloads\lecturer3.png = ..\..\..\..\Downloads\lecturer3.png
 		..\..\..\..\Downloads\lecturer4.png = ..\..\..\..\Downloads\lecturer4.png
 		..\..\..\..\Downloads\modules2.png = ..\..\..\..\Downloads\modules2.png
 		..\..\..\..\Downloads\staff.png = ..\..\..\..\Downloads\staff.png

@@ -10,14 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Medicine_Scheduling_App
 {
     /// <summary>
-    /// Interaction logic for ViewTimetablesTwoxaml.xaml
+    /// Interaction logic for ViewTimetablesTwo.xaml
     /// </summary>
-    public partial class ViewTimetablesTwo : Window
+    public partial class ViewTimetablesTwo : Page
     {
         public ViewTimetablesTwo()
         {

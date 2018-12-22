@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Medicine_Scheduling_App
@@ -17,7 +18,7 @@ namespace Medicine_Scheduling_App
     /// <summary>
     /// Interaction logic for ManageLecturers.xaml
     /// </summary>
-    public partial class ManageLecturers : Window
+    public partial class ManageLecturers : Page
     {
         public ManageLecturers()
         {

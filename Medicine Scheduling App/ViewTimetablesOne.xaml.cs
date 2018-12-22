@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Medicine_Scheduling_App
@@ -17,7 +18,7 @@ namespace Medicine_Scheduling_App
     /// <summary>
     /// Interaction logic for ViewTimetablesOne.xaml
     /// </summary>
-    public partial class ViewTimetablesOne : Window
+    public partial class ViewTimetablesOne : Page
     {
         public ViewTimetablesOne()
         {

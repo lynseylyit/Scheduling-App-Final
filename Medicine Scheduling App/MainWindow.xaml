@@ -6,13 +6,9 @@
         xmlns:local="clr-namespace:Medicine_Scheduling_App"
         mc:Ignorable="d"
         Title="Medicine Scheduling Application" Height="450" Width="800">
-    <Grid Margin="-1,0,0.6,0">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
@@ -21,31 +17,43 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Medicine Scheduling Application" Grid.Row="1" Grid.Column="1" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Grid.ColumnSpan="3"/>
-        <TextBlock Text="Please login to access the application" Grid.Row="3" Grid.Column="1" FontSize="20" FontFamily="Agency FB" Background="#FFFAF78C" Grid.ColumnSpan="4"/>
 
-        <StackPanel Grid.Row="5" Grid.Column="1" Margin="0,0,0,20">
-            <TextBlock Text="Username" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Background="LightGray" Margin="0,10"/>
-            <TextBlock Text="Password" FontSize="20" FontFamily="Agency FB" Background="LightGray" Margin="0,10"><Run FontWeight="Bold"/></TextBlock>
+        <Label 
+            Name="lblHeading"
+            Content="Please login to access the application" 
+            Grid.Row="1" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="4"
+            FontSize="20" 
+            FontFamily="Agency FB" 
+            Background="#FFFAF78C" 
+            HorizontalAlignment="Center" />
+
+        <Image Source="\Users\DozyD\Downloads\lecturer3.png" 
+               Grid.Row="3"
+               Grid.Column="4" 
+               Grid.ColumnSpan="1"
+               Grid.RowSpan="2"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,0,0,20">
+            <Label Content="Username" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Margin="0,10"/>
+            <Label Content="Password" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Margin="0,10"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="5" Grid.Column="2" Margin="0,0,0,20">
-            <TextBox Name="tbxUsername" Grid.Row="5"  Grid.Column="3" Background="LightGray" Margin="0,10"/>
-            <PasswordBox Name="tbxPassword" Grid.Row="6"  Grid.Column="3" Background="LightGray" Margin="0,10"/>
+        <StackPanel Grid.Row="3" Grid.Column="2" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" Margin="0,0,0,20">
+            <TextBox Name="tbxUsername" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Margin="0,10"/>
+            <PasswordBox Name="tbxPassword" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Margin="0,10"/>
+            <Label Name="lblErrorMessage" FontSize="20" FontFamily="Agency FB" FontWeight="Bold" Content="" />
         </StackPanel>
-    
-        <Image Source="C:\Users\DozyD\Downloads\lecturer3.png" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="3" Grid.RowSpan="4" />
-        <Button Content="Close" Name="btnClose" Grid.Row="8" Grid.Column="8" Background="#FFFAF78C" FontWeight="Bold"/>
-        <Button Content="OK" Name="btnOk" Grid.Row="8" Grid.Column="7" Background="#FFFAF78C" FontWeight="Bold" Click="btnOk_Click"/>
+
+        <Button Grid.Row="5" Grid.Column="2" Content="Close" Name="btnClose" Background="#FFFAF78C" FontWeight="Bold" ToolTip="Click this button to close the application"/>
+        <Button Grid.Row="5" Grid.Column="3" Content="OK" Name="btnOk" Background="#FFFAF78C" FontWeight="Bold" Click="btnOk_Click" ToolTip="Click this button to login"/>
     </Grid>
 </Window>
