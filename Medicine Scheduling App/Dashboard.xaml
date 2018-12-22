@@ -5,35 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Medicine_Scheduling_App"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="Dashboard" Height="450" Width="800">
-    
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="20" />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Button Content="View Timetables" Name="btnViewTimetables" Grid.Row="2" Grid.Column="1" Click="btnTime_Click"/>
-        <Button Content="Manage Modules" Name="btnManageModules" Grid.Row="2" Grid.Column="2" Click="btnModules_Click"/>
-        <Button Content="Manage Lectures" Name="btnManageLectures" Grid.Row="2" Grid.Column="3" />
-        <Button Content="Manage Lecturers" Name="btnManageLecturers" Grid.Row="2" Grid.Column="4" />
-        <Button Content="Manage Venues" Name="btnManageVenues" Grid.Row="2" Grid.Column="5" />
-        <Button Content="Logout" Name="btnLogout" Grid.Row="7" Grid.Column="5" />
-        <Image Source="C:\Users\DozyD\Downloads\lecturer4.png" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3" />
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,10">
+            <Button Name="btnTimetables" Content="View Timetables" Height="26" Width="100" Margin="10,0"></Button>
+            <Button Name="btnModules" Content="Manage Modules" Height="26" Width="100" Margin="10,0"></Button>
+            <Button Name="btnLectures" Content="Manage Lectures" Height="26" Width="100" Margin="10,0"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10">
+            <Button Name="btnLecturers" Content="Manage Lecturers" Height="26" Width="100" Margin="10,0"></Button>
+            <Button Name="btnVenues" Content="Manage Venues" Height="26" Width="100" Margin="10,0"></Button>
+            <Button Name="btnLogout" Content="Logout" Height="26" Width="100" Margin="10,0"></Button>
+        </StackPanel>
+        
+        <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,10,2,5">
+            <Border BorderThickness="3" BorderBrush="Black" CornerRadius="10" Padding="4">
+                <Border.Effect>
+                    <DropShadowEffect Color="Gray" 
+                                      Opacity="0.5"
+                                      ShadowDepth="4" />
+                </Border.Effect>
+                <Frame Name="frmMain" />
+            </Border>
+        </DockPanel>
+        
     </Grid>
 </Window>

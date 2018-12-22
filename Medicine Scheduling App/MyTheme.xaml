@@ -5,7 +5,7 @@
     <Style TargetType="{x:Type Window}">
         <Setter Property="Background">
             <Setter.Value>
-                <SolidColorBrush Color="#FF14A4A7"/>
+                <ImageBrush ImageSource="Images/background.png" Stretch="UniformToFill" Opacity="0.8" />
             </Setter.Value>
         </Setter>
     </Style>
