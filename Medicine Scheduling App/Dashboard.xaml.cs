@@ -27,12 +27,10 @@ namespace Medicine_Scheduling_App
         private void btnTime_Click(object sender, RoutedEventArgs e)
         {
             ViewTimetablesOne viewTimetable = new ViewTimetablesOne();
-            viewTimetable.ShowDialog();
         }
         private void btnModules_Click(object sender, RoutedEventArgs e)
         {
             ManageModules modules = new ManageModules();
-            modules.ShowDialog();
         }
     }
 }

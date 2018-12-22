@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineSchedulingApp", "MedicineSchedulingApp.csproj", "{14E5FF66-F1A3-4760-BEB7-A85047E47FAA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63F949AF-722D-471A-AEE8-2313A702675A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{9B0675B4-9943-4FAF-8C6D-A164597CD0FD}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\Downloads\lecturer.png = ..\..\..\..\Downloads\lecturer.png
 		..\..\..\..\Downloads\lecturer3.png = ..\..\..\..\Downloads\lecturer3.png
@@ -28,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B0675B4-9943-4FAF-8C6D-A164597CD0FD} = {63F949AF-722D-471A-AEE8-2313A702675A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1BAC2033-FCEB-4CEC-B42E-75A10722E944}
