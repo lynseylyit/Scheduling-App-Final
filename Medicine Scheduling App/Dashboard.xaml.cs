@@ -25,10 +25,34 @@ namespace Medicine_Scheduling_App
             InitializeComponent();
         }
 
+        private void btnTimetables_Click(object sender, RoutedEventArgs e)
+        {
+            ViewTimetables timetables = new ViewTimetables();
+            frmMain.Navigate(timetables);
+        }
+
         private void btnModules_Click(object sender, RoutedEventArgs e)
         {
             ManageModules modules = new ManageModules();
             frmMain.Navigate(modules);
+        }
+
+        private void btnLectures_Click(object sender, RoutedEventArgs e)
+        {
+            ManageLectures lectures = new ManageLectures();
+            frmMain.Navigate(lectures);
+        }
+
+        private void btnLecturers_Click(object sender, RoutedEventArgs e)
+        {
+            ManageLecturers lecturers = new ManageLecturers();
+            frmMain.Navigate(lecturers);
+        }
+
+        private void btnVenues_Click(object sender, RoutedEventArgs e)
+        {
+            ManageVenues venues = new ManageVenues();
+            frmMain.Navigate(venues);
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
@@ -36,12 +60,6 @@ namespace Medicine_Scheduling_App
             MainWindow mainWindow = new MainWindow();
            //mainWindow.Show();
             this.Close();
-        }
-
-        private void btnTimetables_Click(object sender, RoutedEventArgs e)
-        {
-            ViewTimetables timetables = new ViewTimetables();
-            frmMain.Navigate(timetables);
         }
 
     }

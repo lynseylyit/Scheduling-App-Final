@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Medicine_Scheduling_App
 {
     /// <summary>
-    /// Interaction logic for ManageLecturesOne.xaml
+    /// Interaction logic for ManageLectures.xaml
     /// </summary>
-    public partial class ManageLecturesOne : Page
+    public partial class ManageLectures : Page
     {
-        public ManageLecturesOne()
+        public ManageLectures()
         {
             InitializeComponent();
         }

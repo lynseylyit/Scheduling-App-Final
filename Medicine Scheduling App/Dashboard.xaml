@@ -22,13 +22,13 @@
 
         <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,10">
             <Button Name="btnTimetables" Content="View Timetables" Height="26" Width="100" Margin="10,0" Click="btnTimetables_Click"></Button>
-            <Button Name="btnModules" Content="Manage Modules" Height="26" Width="100" Margin="10,0"></Button>
-            <Button Name="btnLectures" Content="Manage Lectures" Height="26" Width="100" Margin="10,0"></Button>
+            <Button Name="btnModules" Content="Manage Modules" Height="26" Width="100" Margin="10,0" Click="btnModules_Click"></Button>
+            <Button Name="btnLectures" Content="Manage Lectures" Height="26" Width="100" Margin="10,0" Click="btnLectures_Click"></Button>
         </StackPanel>
 
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10">
-            <Button Name="btnLecturers" Content="Manage Lecturers" Height="26" Width="100" Margin="10,0"></Button>
-            <Button Name="btnVenues" Content="Manage Venues" Height="26" Width="100" Margin="10,0"></Button>
+            <Button Name="btnLecturers" Content="Manage Lecturers" Height="26" Width="100" Margin="10,0" Click="btnLecturers_Click"></Button>
+            <Button Name="btnVenues" Content="Manage Venues" Height="26" Width="100" Margin="10,0" Click="btnVenues_Click"></Button>
             <Button Name="btnLogout" Content="Logout" Height="26" Width="100" Margin="10,0" Click="btnLogout_Click"></Button>
         </StackPanel>
         

@@ -64,11 +64,8 @@
     <Compile Include="ManageLecturers.xaml.cs">
       <DependentUpon>ManageLecturers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageLecturesOne.xaml.cs">
-      <DependentUpon>ManageLecturesOne.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ManageLecturesTwo.xaml.cs">
-      <DependentUpon>ManageLecturesTwo.xaml</DependentUpon>
+    <Compile Include="ManageLectures.xaml.cs">
+      <DependentUpon>ManageLectures.xaml</DependentUpon>
     </Compile>
     <Compile Include="ManageModules.xaml.cs">
       <DependentUpon>ManageModules.xaml</DependentUpon>
@@ -106,11 +103,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManageLecturesOne.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ManageLecturesTwo.xaml">
+    <Page Include="ManageLectures.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
