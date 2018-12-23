@@ -9,39 +9,124 @@
       Title="View Timetables">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="20" />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="20" />
+            <RowDefinition Height="0.9*" />
+            <RowDefinition Height="0.1*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Select Academic Year and Module" FontSize="16" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2"/>
-        <ComboBox Name="cmbYear" FontSize="16" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2">
-            <ComboBoxItem>Item 1</ComboBoxItem>
-            <ComboBoxItem>Item 2</ComboBoxItem>
-            <ComboBoxItem>Item 3</ComboBoxItem>
-        </ComboBox>
-        <ComboBox Name="cmbModCode" FontSize="16" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2">
-            <ComboBoxItem>Item 1</ComboBoxItem>
-            <ComboBoxItem>Item 2</ComboBoxItem>
-            <ComboBoxItem>Item 3</ComboBoxItem>
-        </ComboBox>
-        <Button Content="OK" Name="btnOk" Grid.Row="6" Grid.Column="4" />
-        <Button Content="Logout" Name="btnLogout" Grid.Row="7" Grid.Column="6" />
+
+        <StackPanel>
+            <TabControl Height="400">
+                <TabControl.Resources>
+                    <Style TargetType="{x:Type TabItem}" >
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="FontFamily" Value="SegoeUI" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="Padding" Value="10" />
+                    </Style>
+                </TabControl.Resources>
+
+                <TabItem Header="Tab 1" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="63*"/>
+                            <ColumnDefinition Width="731*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*" />
+                            <RowDefinition Height="0.5*" />
+                        </Grid.RowDefinitions>
+
+                        <ListView Name="lstUserList" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0.4,147" Grid.RowSpan="2" >
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Column 1" Width="150">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn Header="Column 2" Width="150">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn Header="Column 3" Width="150">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn Header="Column 4" Width="150">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn Header="Column 5" Width="150">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+
+                        <StackPanel Name="stkUserDetails" Grid.Row="1" HorizontalAlignment="Center" Grid.Column="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.3*" />
+                                    <ColumnDefinition Width="0.7*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.16*" />
+                                    <RowDefinition Height="0.16*" />
+                                    <RowDefinition Height="0.16*" />
+                                    <RowDefinition Height="0.16*" />
+                                    <RowDefinition Height="0.16*" />
+                                    <RowDefinition Height="0.16*" />
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0" Grid.Column="0" Content="Label 1" />
+                                <Label Grid.Row="1" Grid.Column="0" Content="Label 2" />
+                                <Label Grid.Row="2" Grid.Column="0" Content="Label 3" />
+                                <Label Grid.Row="3" Grid.Column="0" Content="Label 4" />
+                                <Label Grid.Row="4" Grid.Column="0" Content="Label 5" />
+
+                                <TextBox Grid.Row="0" Grid.Column="1" Name="tbxNumber1" />
+                                <TextBox Grid.Row="1" Grid.Column="1" Name="tbxNumber2" />
+                                <TextBox Grid.Row="2" Grid.Column="1" Name="tbxNumber3" />
+                                <TextBox Grid.Row="3" Grid.Column="1" Name="tbxNumber4" />
+                                <ComboBox Grid.Row="4" Grid.Column="1" Width="150" >
+                                    <ComboBoxItem Content="Administrator" />
+                                    <ComboBoxItem Content="Module Coordinator" />
+                                    <ComboBoxItem Content="Lecturer" />
+                                </ComboBox>
+
+                                <Button Grid.Row="5" Grid.Column="1" Name="btnUpdate" Content="Update" Width="150" Height="26" HorizontalAlignment="Right"></Button>
+                            </Grid>
+                        </StackPanel>
+
+                    </Grid>
+
+                </TabItem>
+
+                <TabItem Header="Tab 2" >
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+
     </Grid>
 </Page>

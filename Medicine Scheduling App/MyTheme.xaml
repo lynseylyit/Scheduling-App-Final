@@ -17,5 +17,4 @@
     <Style TargetType="{x:Type local:ManageModules}" BasedOn="{StaticResource {x:Type Page}}"/>
     <Style TargetType="{x:Type local:ManageVenues}" BasedOn="{StaticResource {x:Type Page}}"/>
     <Style TargetType="{x:Type local:ViewTimetables}" BasedOn="{StaticResource {x:Type Page}}"/>
-    <Style TargetType="{x:Type local:ViewTimetablesTwo}" BasedOn="{StaticResource {x:Type Page}}"/>
 </ResourceDictionary>
