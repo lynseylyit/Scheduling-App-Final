@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Medicine_Scheduling_App"
         mc:Ignorable="d"
         WindowState="Maximized"
+        WindowStyle="none"
         Title="Dashboard" Height="450" Width="800">
 
     <Grid>
@@ -20,7 +21,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,10">
-            <Button Name="btnTimetables" Content="View Timetables" Height="26" Width="100" Margin="10,0"></Button>
+            <Button Name="btnTimetables" Content="View Timetables" Height="26" Width="100" Margin="10,0" Click="btnTimetables_Click"></Button>
             <Button Name="btnModules" Content="Manage Modules" Height="26" Width="100" Margin="10,0"></Button>
             <Button Name="btnLectures" Content="Manage Lectures" Height="26" Width="100" Margin="10,0"></Button>
         </StackPanel>
@@ -28,7 +29,7 @@
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10">
             <Button Name="btnLecturers" Content="Manage Lecturers" Height="26" Width="100" Margin="10,0"></Button>
             <Button Name="btnVenues" Content="Manage Venues" Height="26" Width="100" Margin="10,0"></Button>
-            <Button Name="btnLogout" Content="Logout" Height="26" Width="100" Margin="10,0"></Button>
+            <Button Name="btnLogout" Content="Logout" Height="26" Width="100" Margin="10,0" Click="btnLogout_Click"></Button>
         </StackPanel>
         
         <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,10,2,5">

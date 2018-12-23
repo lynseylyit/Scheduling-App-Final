@@ -15,7 +15,17 @@
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <TabControl>
+            <TabControl Height="400">
+                <TabControl.Resources>
+                    <Style TargetType="{x:Type TabItem}" >
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="FontFamily" Value="SegoeUI" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="Padding" Value="10" />
+                    </Style>
+                </TabControl.Resources>
+                
                 <TabItem Header="Tab 1" >
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -73,7 +83,7 @@
                             </ListView.View>
                         </ListView>
 
-                        <StackPanel Name="stkUserDetails" Grid.Row="1" HorizontalAlignment="Center" Grid.Column="1" Margin="234.512,0.2,298.4,0">
+                        <StackPanel Name="stkUserDetails" Grid.Row="1" HorizontalAlignment="Center" Grid.Column="1">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="0.3*" />
@@ -105,10 +115,12 @@
                                     <ComboBoxItem Content="Lecturer" />
                                 </ComboBox>
 
-                                <Button Grid.Row="5" Grid.Column="1" Name="btnUpdate" Content="Update" Width="150"></Button>
+                                <Button Grid.Row="5" Grid.Column="1" Name="btnUpdate" Content="Update" Width="150" Height="26" HorizontalAlignment="Right"></Button>
                             </Grid>
                         </StackPanel>
+                    
                     </Grid>
+                
                 </TabItem>
 
                 <TabItem Header="Tab 2" >

@@ -76,8 +76,8 @@
     <Compile Include="ManageVenues.xaml.cs">
       <DependentUpon>ManageVenues.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewTimetablesOne.xaml.cs">
-      <DependentUpon>ViewTimetablesOne.xaml</DependentUpon>
+    <Compile Include="ViewTimetables.xaml.cs">
+      <DependentUpon>ViewTimetables.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewTimetablesTwo.xaml.cs">
       <DependentUpon>ViewTimetablesTwo.xaml</DependentUpon>
@@ -126,7 +126,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewTimetablesOne.xaml">
+    <Page Include="ViewTimetables.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
