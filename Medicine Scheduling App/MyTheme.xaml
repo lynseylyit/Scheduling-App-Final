@@ -12,11 +12,11 @@
     <Style TargetType="{x:Type local:MainWindow}" BasedOn="{StaticResource {x:Type Window}}"/>
     <Style TargetType="{x:Type local:App}" BasedOn="{StaticResource {x:Type Window}}"/>
     <Style TargetType="{x:Type local:Dashboard}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ManageLecturers}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ManageLecturesOne}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ManageLecturesTwo}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ManageModules}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ManageVenues}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ViewTimetables}" BasedOn="{StaticResource {x:Type Window}}"/>
-    <Style TargetType="{x:Type local:ViewTimetablesTwo}" BasedOn="{StaticResource {x:Type Window}}"/>
+    <Style TargetType="{x:Type local:ManageLecturers}" BasedOn="{StaticResource {x:Type Page}}"/>
+    <Style TargetType="{x:Type local:ManageLecturesOne}" BasedOn="{StaticResource {x:Type Page}}"/>
+    <Style TargetType="{x:Type local:ManageLecturesTwo}" BasedOn="{StaticResource {x:Type Page}}"/>
+    <Style TargetType="{x:Type local:ManageModules}" BasedOn="{StaticResource {x:Type Page}}"/>
+    <Style TargetType="{x:Type local:ManageVenues}" BasedOn="{StaticResource {x:Type Page}}"/>
+    <Style TargetType="{x:Type local:ViewTimetables}" BasedOn="{StaticResource {x:Type Page}}"/>
+    <Style TargetType="{x:Type local:ViewTimetablesTwo}" BasedOn="{StaticResource {x:Type Page}}"/>
 </ResourceDictionary>
