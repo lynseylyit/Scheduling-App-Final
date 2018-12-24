@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Medicine_Scheduling_App
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for Dashboard.xaml
     /// </summary>
     public partial class Dashboard : Window
     {
@@ -24,14 +24,44 @@ namespace Medicine_Scheduling_App
         {
             InitializeComponent();
         }
-        private void btnTime_Click(object sender, RoutedEventArgs e)
+
+        private void btnTimetables_Click(object sender, RoutedEventArgs e)
         {
-            ViewTimetablesOne viewTimetable = new ViewTimetablesOne();
+            ViewTimetables timetables = new ViewTimetables();
+            frmMain.Navigate(timetables);
         }
+
         private void btnModules_Click(object sender, RoutedEventArgs e)
         {
             ManageModules modules = new ManageModules();
+            frmMain.Navigate(modules);
         }
+
+        private void btnLectures_Click(object sender, RoutedEventArgs e)
+        {
+            ManageLectures lectures = new ManageLectures();
+            frmMain.Navigate(lectures);
+        }
+
+        private void btnLecturers_Click(object sender, RoutedEventArgs e)
+        {
+            ManageLecturers lecturers = new ManageLecturers();
+            frmMain.Navigate(lecturers);
+        }
+
+        private void btnVenues_Click(object sender, RoutedEventArgs e)
+        {
+            ManageVenues venues = new ManageVenues();
+            frmMain.Navigate(venues);
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+           //mainWindow.Show();
+            this.Close();
+        }
+
     }
 }
 

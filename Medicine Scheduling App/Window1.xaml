@@ -1,0 +1,38 @@
+﻿<Window x:Class="Medicine_Scheduling_App.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Medicine_Scheduling_App"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Button Content="View Timetables" Name="btnViewTimetables" Grid.Row="2" Grid.Column="1" Click="btnTime_Click"/>
+        <Button Content="Manage Modules" Name="btnManageModules" Grid.Row="2" Grid.Column="2" Click="btnModules_Click"/>
+        <Button Content="Manage Lectures" Name="btnManageLectures" Grid.Row="2" Grid.Column="3" />
+        <Button Content="Manage Lecturers" Name="btnManageLecturers" Grid.Row="2" Grid.Column="4" />
+        <Button Content="Manage Venues" Name="btnManageVenues" Grid.Row="2" Grid.Column="5" />
+        <Button Content="Logout" Name="btnLogout" Grid.Row="7" Grid.Column="5" />
+        <Image Source="C:\Users\DozyD\Downloads\lecturer4.png" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3" />
+    </Grid>
+</Window>

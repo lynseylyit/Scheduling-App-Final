@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Title="Medicine Scheduling Application" MinWidth="780" Width="780" Height="325">
+        Title="Medicine Scheduling Application" MaxWidth="780" MinWidth="780" Width="780" MaxHeight="330" Height="330">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
@@ -41,14 +41,14 @@
             <Label Name="lblErrorMessage" Content="" />
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Right" >
-            <Button Content="Close" Name="btnClose" Height="26" Width="130" Margin="10,1" Background="#FFFAF78C" ToolTip="Click this button to close the application"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <Button Content="Close" Name="btnClose" Height="26" Width="130" Margin="10,1" Background="#FFFAF78C" Click="btnClose_Click" ToolTip="Click this button to close the application"/>
             <Button Content="OK" Name="btnOk" Height="26" Width="130" Margin="10,1" Background="#FFFAF78C" Click="btnOk_Click" ToolTip="Click this button to login"/>
         </StackPanel>
 
-        <Image Source="C:\Users\DozyD\Downloads\lecturer3.png" 
+        <Image Source="Images\lecturer3.png" 
                Grid.Row="1"
-               Grid.Column="3"
+               Grid.Column="2"
                Grid.RowSpan="2"
                HorizontalAlignment="Left"
                Margin="20"

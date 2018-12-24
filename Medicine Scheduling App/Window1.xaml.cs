@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Medicine_Scheduling_App
 {
     /// <summary>
-    /// Interaction logic for ManageLecturesOne.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class ManageLecturesOne : Page
+    public partial class Window1 : Window
     {
-        public ManageLecturesOne()
+        public Window1()
         {
             InitializeComponent();
         }

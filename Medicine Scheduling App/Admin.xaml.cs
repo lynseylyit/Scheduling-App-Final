@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Medicine_Scheduling_App
 {
     /// <summary>
-    /// Interaction logic for ViewTimetablesTwo.xaml
+    /// Interaction logic for Admin.xaml
     /// </summary>
-    public partial class ViewTimetablesTwo : Page
+    public partial class Admin : Page
     {
-        public ViewTimetablesTwo()
+        public Admin()
         {
             InitializeComponent();
         }

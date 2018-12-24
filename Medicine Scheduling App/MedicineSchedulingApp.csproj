@@ -55,17 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
     <Compile Include="ManageLecturers.xaml.cs">
       <DependentUpon>ManageLecturers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageLecturesOne.xaml.cs">
-      <DependentUpon>ManageLecturesOne.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ManageLecturesTwo.xaml.cs">
-      <DependentUpon>ManageLecturesTwo.xaml</DependentUpon>
+    <Compile Include="ManageLectures.xaml.cs">
+      <DependentUpon>ManageLectures.xaml</DependentUpon>
     </Compile>
     <Compile Include="ManageModules.xaml.cs">
       <DependentUpon>ManageModules.xaml</DependentUpon>
@@ -73,12 +73,13 @@
     <Compile Include="ManageVenues.xaml.cs">
       <DependentUpon>ManageVenues.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewTimetablesOne.xaml.cs">
-      <DependentUpon>ViewTimetablesOne.xaml</DependentUpon>
+    <Compile Include="ViewTimetables.xaml.cs">
+      <DependentUpon>ViewTimetables.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewTimetablesTwo.xaml.cs">
-      <DependentUpon>ViewTimetablesTwo.xaml</DependentUpon>
-    </Compile>
+    <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ManageLecturers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,11 +100,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManageLecturesOne.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ManageLecturesTwo.xaml">
+    <Page Include="ManageLectures.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,11 +116,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewTimetablesOne.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ViewTimetablesTwo.xaml">
+    <Page Include="ViewTimetables.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,6 +146,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lecturer.png" />
+    <Resource Include="Images\lecturer3.png" />
+    <Resource Include="Images\lecturer4.png" />
+    <Resource Include="Images\modules2.png" />
+    <Resource Include="Images\staff.png" />
+    <Resource Include="Images\venues.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
