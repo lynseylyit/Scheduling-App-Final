@@ -24,5 +24,31 @@ namespace Medicine_Scheduling_App
         {
             InitializeComponent();
         }
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection("mysqlconnection");
+                DataSet ds;
+                SqlDataAdapter da;
+                SqlCommandBuilder scb;
+                DataTable dt;
+
+                da = new SqlDataAdapter("SELECT * FROM [table] WHERE [NameColumn] LIKE '%" + txtSearch.Text + "%'" OR [DateAColumn] LIKE '%" + txtSearch.Text + "%'" OR [TimeAColumn] LIKE '" + txtSearch.Text + "' OR [TimeBColumn] LIKE '" + txtSearch.Text + "' OR [TimeCColumn] LIKE '" + txtSearch.Text + "'", con);
+                ds = new DataSet();
+                dt = new DataTable();
+                ds.Clear();
+                da.Fill(dt);
+                searchedList.ItemsSource = dt.DefaultView;
+
+                con.Open();
+                con.Close();
+            }
+            catch
+            {
+                return;
+            }
+
+        }
     }
 }

@@ -9,28 +9,17 @@
       Title="ManageModules">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="20" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="20" />
-        </Grid.RowDefinitions>
-        <Image Source="C:\Users\DozyD\Downloads\modules2.png" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" />
-        <Button Content="Logout" Name="btnLogout" Grid.Row="7" Grid.Column="6" />
+        <ListView x:Name="searchedList" HorizontalAlignment="Left" Height="190" Margin="10,20,0,0" VerticalAlignment="Top" Width="555" Grid.ColumnSpan="2" ItemsSource="{Binding Source=Server}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding NameColumn}"/>
+                        <GridViewColumn Header="TimeA" Width="70" DisplayMemberBinding="{Binding TimeAColumn}"/>
+                        <GridViewColumn Header="TimeB" Width="70" DisplayMemberBinding="{Binding TimeBColumn}"/>
+                        <GridViewColumn Header="TimeC" Width="70" DisplayMemberBinding="{Binding TimeCColumn}"/>
+                        <GridViewColumn Header="DateA" Width="120" DisplayMemberBinding="{Binding DateAColumn}"/>
+                        <GridViewColumn Header="DateB" Width="120" DisplayMemberBinding="{Binding DateBColumn}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
     </Grid>
 </Page>
