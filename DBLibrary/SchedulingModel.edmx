@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SchedulingDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="academic_year">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="year" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="access_level">
+          <Key>
+            <PropertyRef Name="levelid" />
+          </Key>
+          <Property Name="levelid" Type="int" Nullable="false" />
+          <Property Name="jobrole" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lecturers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lectures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="academic_year" Type="int" Nullable="false" />
+          <Property Name="session_title" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="module_code" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="week" Type="int" Nullable="false" />
+          <Property Name="lecturer" Type="int" Nullable="false" />
+          <Property Name="date" Type="date" Nullable="false" />
+          <Property Name="start_time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="duration" Type="int" Nullable="false" />
+          <Property Name="day" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="session_type" Type="int" Nullable="false" />
+          <Property Name="venue" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="modules">
+          <Key>
+            <PropertyRef Name="module_code" />
+          </Key>
+          <Property Name="module_code" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="creation_date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="session_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="pass" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="level_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="venues">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_lectures_academic_year">
+          <End Role="academic_year" Type="Self.academic_year" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="academic_year">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="academic_year" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lectures_lecturers">
+          <End Role="lecturers" Type="Self.lecturers" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lecturers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="lecturer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lectures_modules">
+          <End Role="modules" Type="Self.modules" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="modules">
+              <PropertyRef Name="module_code" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="module_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lectures_session_type">
+          <End Role="session_type" Type="Self.session_type" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="session_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="session_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lectures_venues">
+          <End Role="venues" Type="Self.venues" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lectures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="venues">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="venue" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_users_access_level">
+          <End Role="access_level" Type="Self.access_level" Multiplicity="1" />
+          <End Role="users" Type="Self.users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="access_level">
+              <PropertyRef Name="levelid" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="level_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SchedulingDBModelStoreContainer">
+          <EntitySet Name="academic_year" EntityType="Self.academic_year" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="access_level" EntityType="Self.access_level" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="lecturers" EntityType="Self.lecturers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="lectures" EntityType="Self.lectures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="modules" EntityType="Self.modules" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="session_type" EntityType="Self.session_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="venues" EntityType="Self.venues" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_lectures_academic_year" Association="Self.FK_lectures_academic_year">
+            <End Role="academic_year" EntitySet="academic_year" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lectures_lecturers" Association="Self.FK_lectures_lecturers">
+            <End Role="lecturers" EntitySet="lecturers" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lectures_modules" Association="Self.FK_lectures_modules">
+            <End Role="modules" EntitySet="modules" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lectures_session_type" Association="Self.FK_lectures_session_type">
+            <End Role="session_type" EntitySet="session_type" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lectures_venues" Association="Self.FK_lectures_venues">
+            <End Role="venues" EntitySet="venues" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_users_access_level" Association="Self.FK_users_access_level">
+            <End Role="access_level" EntitySet="access_level" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SchedulingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="academic_year">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="year" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="lectures" Relationship="Self.FK_lectures_academic_year" FromRole="academic_year" ToRole="lectures" />
+        </EntityType>
+        <EntityType Name="access_level">
+          <Key>
+            <PropertyRef Name="levelid" />
+          </Key>
+          <Property Name="levelid" Type="Int32" Nullable="false" />
+          <Property Name="jobrole" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="users" Relationship="Self.FK_users_access_level" FromRole="access_level" ToRole="users" />
+        </EntityType>
+        <EntityType Name="lecturer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="lectures" Relationship="Self.FK_lectures_lecturers" FromRole="lecturers" ToRole="lectures" />
+        </EntityType>
+        <EntityType Name="lecture">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="academic_year" Type="Int32" Nullable="false" />
+          <Property Name="session_title" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="module_code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="week" Type="Int32" Nullable="false" />
+          <Property Name="lecturer" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="start_time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="duration" Type="Int32" Nullable="false" />
+          <Property Name="day" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="session_type" Type="Int32" Nullable="false" />
+          <Property Name="venue" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="academic_year1" Relationship="Self.FK_lectures_academic_year" FromRole="lectures" ToRole="academic_year" />
+          <NavigationProperty Name="lecturer1" Relationship="Self.FK_lectures_lecturers" FromRole="lectures" ToRole="lecturers" />
+          <NavigationProperty Name="module" Relationship="Self.FK_lectures_modules" FromRole="lectures" ToRole="modules" />
+          <NavigationProperty Name="session_type1" Relationship="Self.FK_lectures_session_type" FromRole="lectures" ToRole="session_type" />
+          <NavigationProperty Name="venue1" Relationship="Self.FK_lectures_venues" FromRole="lectures" ToRole="venues" />
+        </EntityType>
+        <EntityType Name="module">
+          <Key>
+            <PropertyRef Name="module_code" />
+          </Key>
+          <Property Name="module_code" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="creation_date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="lectures" Relationship="Self.FK_lectures_modules" FromRole="modules" ToRole="lectures" />
+        </EntityType>
+        <EntityType Name="session_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="lectures" Relationship="Self.FK_lectures_session_type" FromRole="session_type" ToRole="lectures" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pass" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="level_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="access_level" Relationship="Self.FK_users_access_level" FromRole="users" ToRole="access_level" />
+        </EntityType>
+        <EntityType Name="venue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="lectures" Relationship="Self.FK_lectures_venues" FromRole="venues" ToRole="lectures" />
+        </EntityType>
+        <Association Name="FK_lectures_academic_year">
+          <End Role="academic_year" Type="Self.academic_year" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="academic_year">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="academic_year" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_users_access_level">
+          <End Role="access_level" Type="Self.access_level" Multiplicity="1" />
+          <End Role="users" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="access_level">
+              <PropertyRef Name="levelid" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="level_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lectures_lecturers">
+          <End Role="lecturers" Type="Self.lecturer" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lecturers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="lecturer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lectures_modules">
+          <End Role="modules" Type="Self.module" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="modules">
+              <PropertyRef Name="module_code" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="module_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lectures_session_type">
+          <End Role="session_type" Type="Self.session_type" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="session_type">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="session_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lectures_venues">
+          <End Role="venues" Type="Self.venue" Multiplicity="1" />
+          <End Role="lectures" Type="Self.lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="venues">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lectures">
+              <PropertyRef Name="venue" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SchedulingDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="academic_year" EntityType="Self.academic_year" />
+          <EntitySet Name="access_level" EntityType="Self.access_level" />
+          <EntitySet Name="lecturers" EntityType="Self.lecturer" />
+          <EntitySet Name="lectures" EntityType="Self.lecture" />
+          <EntitySet Name="modules" EntityType="Self.module" />
+          <EntitySet Name="session_type" EntityType="Self.session_type" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="venues" EntityType="Self.venue" />
+          <AssociationSet Name="FK_lectures_academic_year" Association="Self.FK_lectures_academic_year">
+            <End Role="academic_year" EntitySet="academic_year" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_users_access_level" Association="Self.FK_users_access_level">
+            <End Role="access_level" EntitySet="access_level" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lectures_lecturers" Association="Self.FK_lectures_lecturers">
+            <End Role="lecturers" EntitySet="lecturers" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lectures_modules" Association="Self.FK_lectures_modules">
+            <End Role="modules" EntitySet="modules" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lectures_session_type" Association="Self.FK_lectures_session_type">
+            <End Role="session_type" EntitySet="session_type" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lectures_venues" Association="Self.FK_lectures_venues">
+            <End Role="venues" EntitySet="venues" />
+            <End Role="lectures" EntitySet="lectures" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SchedulingDBModelStoreContainer" CdmEntityContainer="SchedulingDBEntities">
+          <EntitySetMapping Name="academic_year">
+            <EntityTypeMapping TypeName="SchedulingDBModel.academic_year">
+              <MappingFragment StoreEntitySet="academic_year">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="year" ColumnName="year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="access_level">
+            <EntityTypeMapping TypeName="SchedulingDBModel.access_level">
+              <MappingFragment StoreEntitySet="access_level">
+                <ScalarProperty Name="levelid" ColumnName="levelid" />
+                <ScalarProperty Name="jobrole" ColumnName="jobrole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lecturers">
+            <EntityTypeMapping TypeName="SchedulingDBModel.lecturer">
+              <MappingFragment StoreEntitySet="lecturers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lectures">
+            <EntityTypeMapping TypeName="SchedulingDBModel.lecture">
+              <MappingFragment StoreEntitySet="lectures">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="academic_year" ColumnName="academic_year" />
+                <ScalarProperty Name="session_title" ColumnName="session_title" />
+                <ScalarProperty Name="module_code" ColumnName="module_code" />
+                <ScalarProperty Name="week" ColumnName="week" />
+                <ScalarProperty Name="lecturer" ColumnName="lecturer" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="start_time" ColumnName="start_time" />
+                <ScalarProperty Name="duration" ColumnName="duration" />
+                <ScalarProperty Name="day" ColumnName="day" />
+                <ScalarProperty Name="session_type" ColumnName="session_type" />
+                <ScalarProperty Name="venue" ColumnName="venue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="modules">
+            <EntityTypeMapping TypeName="SchedulingDBModel.module">
+              <MappingFragment StoreEntitySet="modules">
+                <ScalarProperty Name="module_code" ColumnName="module_code" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="session_type">
+            <EntityTypeMapping TypeName="SchedulingDBModel.session_type">
+              <MappingFragment StoreEntitySet="session_type">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SchedulingDBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="SchedulingDBModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="level_id" ColumnName="level_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="venues">
+            <EntityTypeMapping TypeName="SchedulingDBModel.venue">
+              <MappingFragment StoreEntitySet="venues">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

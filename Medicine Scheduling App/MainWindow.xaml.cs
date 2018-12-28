@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,9 @@ namespace Medicine_Scheduling_App
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        SchedulingDBEntities db = new SchedulingDBEntities("metadata=res://*/SchedulingModel.csdl|res://*/SchedulingModel.ssdl|res://*/SchedulingModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.1.2;initial catalog=SchedulingDB;persist security info=True;user id=Lynsey;password='vey7996';MultipleActiveResultSets=True;App=EntityFramework'"
+);
         public MainWindow()
         {
             InitializeComponent();
@@ -27,10 +31,22 @@ namespace Medicine_Scheduling_App
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            // Uri uri = new Uri("AdministratorDashboard.xaml", UriKind.Relative);
-            // NavigationService.Navigate(new Uri("AdministratorDashboard.xaml", UriKind.Relative));
-            Dashboard dashboard = new Dashboard();
-            dashboard.ShowDialog();
+            string currentUser = tbxUsername.Text;
+            string currentPassword = tbxPassword.Password;
+
+            foreach(var user in db.users)
+            {
+                if (user.username == currentUser && user.pass == currentPassword)
+                {
+                    MessageBox.Show("User authenticated");
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.ShowDialog();
+                }
+                else
+                {
+                    lblErrorMessage.Content = "Please check your username and password";
+                }
+            }
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
