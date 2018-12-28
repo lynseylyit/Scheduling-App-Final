@@ -21,25 +21,25 @@ namespace Medicine_Scheduling_App
     /// </summary>
     public partial class MainWindow : Window
     {
+        SchedulingDBEntities db = new SchedulingDBEntities("metadata=res://*/SchedulingModel.csdl|res://*/SchedulingModel.ssdl|res://*/SchedulingModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.1.1;initial catalog=SchedulingDB;persist security info=True;user id=Lynsey;password=ogu3Yapi;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
 
-        SchedulingDBEntities db = new SchedulingDBEntities("metadata=res://*/SchedulingModel.csdl|res://*/SchedulingModel.ssdl|res://*/SchedulingModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.1.2;initial catalog=SchedulingDB;persist security info=True;user id=Lynsey;password='vey7996';MultipleActiveResultSets=True;App=EntityFramework'"
-);
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void btnOk_Click(object sender, RoutedEventArgs e)
+        private void BtnOk_Click(object sender, RoutedEventArgs e)
         {
             string currentUser = tbxUsername.Text;
             string currentPassword = tbxPassword.Password;
 
-            foreach(var user in db.users)
+            foreach (var user in db.users)
             {
                 if (user.username == currentUser && user.pass == currentPassword)
                 {
                     MessageBox.Show("User authenticated");
                     Dashboard dashboard = new Dashboard();
+                    dashboard.user = user;
                     dashboard.ShowDialog();
                 }
                 else
@@ -48,8 +48,7 @@ namespace Medicine_Scheduling_App
                 }
             }
         }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

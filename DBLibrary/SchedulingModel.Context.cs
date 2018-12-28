@@ -31,8 +31,8 @@ namespace DBLibrary
         public virtual DbSet<lecture> lectures { get; set; }
         public virtual DbSet<module> modules { get; set; }
         public virtual DbSet<session_type> session_type { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<user> users { get; set; }
         public virtual DbSet<venue> venues { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

@@ -11,14 +11,15 @@ namespace DBLibrary
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class user
     {
         public int id { get; set; }
         public string username { get; set; }
         public string pass { get; set; }
         public int level_id { get; set; }
-    
+
         public virtual access_level access_level { get; set; }
+
     }
-}
+} 

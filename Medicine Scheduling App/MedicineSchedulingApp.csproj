@@ -168,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBLibrary\DBLibrary.csproj">
-      <Project>{c5bb94a0-e9f5-43ac-a8d7-9850dcbd8748}</Project>
+      <Project>{8071c652-439c-4688-a9b6-3d336f3621b8}</Project>
       <Name>DBLibrary</Name>
     </ProjectReference>
   </ItemGroup>

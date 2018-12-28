@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace Medicine_Scheduling_App
     /// </summary>
     public partial class Dashboard : Window
     {
+
+        public user user = new user();
 
         public Dashboard()
         {

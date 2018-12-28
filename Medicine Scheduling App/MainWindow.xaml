@@ -42,8 +42,8 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
-            <Button Content="Close" Name="btnClose" Height="26" Width="130" Margin="10,1" Background="#FFFAF78C" Click="btnClose_Click" ToolTip="Click this button to close the application"/>
-            <Button Content="OK" Name="btnOk" Height="26" Width="130" Margin="10,1" Background="#FFFAF78C" Click="btnOk_Click" ToolTip="Click this button to login"/>
+            <Button Content="Close" Name="btnClose" Height="26" Width="130" Margin="10,1" Background="#FFFAF78C" Click="BtnClose_Click" ToolTip="Click this button to close the application"/>
+            <Button Content="OK" Name="btnOk" Height="26" Width="130" Margin="10,1" Background="#FFFAF78C" Click= "BtnOk_Click" ToolTip="Click this button to login"/>
         </StackPanel>
 
         <Image Source="Images\lecturer3.png" 

@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c125f2623de34fae937aeacd5f7d82cf" Name="Diagram1">
-        <EntityTypeShape EntityType="SchedulingDBModel.academic_year" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchedulingDBModel.access_level" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchedulingDBModel.lecturer" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchedulingDBModel.lecture" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchedulingDBModel.module" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchedulingDBModel.session_type" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchedulingDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchedulingDBModel.user" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchedulingDBModel.venue" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
-        <AssociationConnector Association="SchedulingDBModel.FK_lectures_academic_year" ManuallyRouted="false" />
-        <AssociationConnector Association="SchedulingDBModel.FK_users_access_level" ManuallyRouted="false" />
-        <AssociationConnector Association="SchedulingDBModel.FK_lectures_lecturers" ManuallyRouted="false" />
-        <AssociationConnector Association="SchedulingDBModel.FK_lectures_modules" ManuallyRouted="false" />
-        <AssociationConnector Association="SchedulingDBModel.FK_lectures_session_type" ManuallyRouted="false" />
-        <AssociationConnector Association="SchedulingDBModel.FK_lectures_venues" ManuallyRouted="false" />
+      <Diagram DiagramId="6b8bd03a56b14349a653ad08c95a3709" Name="Diagram1">
+        <EntityTypeShape EntityType="SchedulingDBModel.academic_year" Width="1.5" PointX="0.75" PointY="2.375" />
+        <EntityTypeShape EntityType="SchedulingDBModel.access_level" Width="1.5" PointX="5.75" PointY="1.125" />
+        <EntityTypeShape EntityType="SchedulingDBModel.lecturer" Width="1.5" PointX="0.75" PointY="8.25" />
+        <EntityTypeShape EntityType="SchedulingDBModel.lecture" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="SchedulingDBModel.module" Width="1.5" PointX="0.75" PointY="13.125" />
+        <EntityTypeShape EntityType="SchedulingDBModel.session_type" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SchedulingDBModel.user" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="SchedulingDBModel.venue" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SchedulingDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" />
+        <AssociationConnector Association="SchedulingDBModel.FK_lectures_academic_year" />
+        <AssociationConnector Association="SchedulingDBModel.FK_users_access_level" />
+        <AssociationConnector Association="SchedulingDBModel.FK_lectures_lecturers" />
+        <AssociationConnector Association="SchedulingDBModel.FK_lectures_modules" />
+        <AssociationConnector Association="SchedulingDBModel.FK_lectures_session_type" />
+        <AssociationConnector Association="SchedulingDBModel.FK_lectures_venues" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

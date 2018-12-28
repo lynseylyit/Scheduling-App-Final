@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5BB94A0-E9F5-43AC-A8D7-9850DCBD8748}</ProjectGuid>
+    <ProjectGuid>{8071C652-439C-4688-A9B6-3D336F3621B8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DBLibrary</RootNamespace>
@@ -101,7 +101,9 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="SchedulingModel.edmx.diagram">
       <DependentUpon>SchedulingModel.edmx</DependentUpon>

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineSchedulingApp", "Me
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63F949AF-722D-471A-AEE8-2313A702675A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLibrary", "..\DBLibrary\DBLibrary.csproj", "{C5BB94A0-E9F5-43AC-A8D7-9850DCBD8748}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLibrary", "..\DBLibrary\DBLibrary.csproj", "{8071C652-439C-4688-A9B6-3D336F3621B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{14E5FF66-F1A3-4760-BEB7-A85047E47FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14E5FF66-F1A3-4760-BEB7-A85047E47FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14E5FF66-F1A3-4760-BEB7-A85047E47FAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5BB94A0-E9F5-43AC-A8D7-9850DCBD8748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5BB94A0-E9F5-43AC-A8D7-9850DCBD8748}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5BB94A0-E9F5-43AC-A8D7-9850DCBD8748}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5BB94A0-E9F5-43AC-A8D7-9850DCBD8748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8071C652-439C-4688-A9B6-3D336F3621B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8071C652-439C-4688-A9B6-3D336F3621B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8071C652-439C-4688-A9B6-3D336F3621B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8071C652-439C-4688-A9B6-3D336F3621B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
