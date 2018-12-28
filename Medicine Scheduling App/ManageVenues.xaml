@@ -30,7 +30,6 @@
         <RowDefinition Height="1*" />
         <RowDefinition Height="20" />
     </Grid.RowDefinitions>
-    <Image Source="C:\Users\DozyD\Downloads\venues.png" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" />
-    <Button Content="Logout" Name="btnLogout" Grid.Row="7" Grid.Column="6" />
+        <Image Source="C:\Users\DozyD\Downloads\venues.png" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" />
     </Grid>
 </Page>

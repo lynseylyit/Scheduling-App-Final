@@ -39,7 +39,7 @@
                                       Opacity="0.5"
                                       ShadowDepth="4" />
                 </Border.Effect>
-                <Frame Name="frmMain" />
+                <Frame Name="frmMain" NavigationUIVisibility="Hidden"/>
             </Border>
         </DockPanel>
         

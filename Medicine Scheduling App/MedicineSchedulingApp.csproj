@@ -80,6 +80,11 @@
     <Compile Include="ManageVenues.xaml.cs">
       <DependentUpon>ManageVenues.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SchedulingDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchedulingDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ViewTimetables.xaml.cs">
       <DependentUpon>ViewTimetables.xaml</DependentUpon>
     </Compile>
@@ -150,6 +155,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SchedulingDBDataSet.xsc">
+      <DependentUpon>SchedulingDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchedulingDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchedulingDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchedulingDBDataSet.xss">
+      <DependentUpon>SchedulingDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
